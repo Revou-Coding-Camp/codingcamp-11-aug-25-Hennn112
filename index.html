@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Website Saya</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="logo-icon">🏠</div>
+                <span>Hendra Company</span>
+            </div>
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="showPage('home')">Beranda</button>
+                <button class="nav-btn" onclick="showPage('profile')">Profil
+                    Kami</button>
+                <button class="nav-btn" onclick="scrollToContact()">Hubungi
+                    Kami</button>
+            </div>
+        </div>
+
+        <!-- HALAMAN BERANDA -->
+        <div id="homePage" class="page active">
+            <div class="container">
+                <!-- Hero Section -->
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1>Hai <span id="userName">Guest</span>, Selamat Datang
+                            di Website Kami</h1>
+                        <p>untuk pertumbuhan pangsa pasar global</p>
+
+                        <div class="objects-text">Memimpin inovasi dalam solusi
+                            teknologi sejak 2010</div>
+                    </div>
+                </div>
+
+                <!-- Headquarters Section -->
+                <div class="headquarters">
+                    <h2>Kantor Pusat Kami</h2>
+                    <div class="hq-grid">
+                        <div class="hq-item">
+                            <div class="hq-circle">🏢</div>
+                            <div class="hq-label">Jakarta</div>
+                        </div>
+                        <div class="hq-item">
+                            <div class="hq-circle">🏦</div>
+                            <div class="hq-label">Bandung</div>
+                        </div>
+                        <div class="hq-item">
+                            <div class="hq-circle">🏪</div>
+                            <div class="hq-label">Surabaya</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Section -->
+                <div class="contact" id="contactSection">
+                    <div class="form-section">
+                        <h2>Hubungi Kami</h2>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label>Nama</label>
+                                <input type="text" name="nama" id="nama"
+                                    placeholder="Masukkan nama lengkap"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Tanggal Lahir</label>
+                                <input type="date" name="tanggal_lahir"
+                                    id="tanggal_lahir" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Jenis Kelamin</label>
+                                <select name="jenis_kelamin" id="jenis_kelamin"
+                                    required>
+                                    <option value>- Pilih Jenis Kelamin
+                                        -</option>
+                                    <option value="Laki-laki">Laki-laki</option>
+                                    <option value="Perempuan">Perempuan</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Pesan</label>
+                                <textarea name="pesan" id="pesan"
+                                    placeholder="Tulis pesan Anda di sini..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit"
+                                class="submit-btn">Kirim</button>
+                        </form>
+                    </div>
+
+                    <div class="result-section">
+                        <div class="result-content" id="resultContent">
+                            <strong>Waktu Saat Ini:</strong> <span
+                                id="currentTime">-</span>
+                            <br><br>
+                            <strong>Nama:</strong> -
+                            <br><br>
+                            <strong>Tanggal Lahir:</strong> -
+                            <br><br>
+                            <strong>Jenis Kelamin:</strong> -
+                            <br><br>
+                            <strong>Pesan:</strong> -
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HALAMAN PROFIL -->
+        <div id="profilePage" class="page">
+            <div class="container">
+                <!-- Photo Banner -->
+                <div class="profile-banner">
+                    <div class="banner-content">
+                        <h1>Hendra Company Inovasi</h1>
+                        <p>Solusi Teknologi Terdepan Sejak 2010</p>
+                    </div>
+                </div>
+
+                <!-- Profile Content -->
+                <div class="profile-content">
+                    <!-- About the Company Section -->
+                    <div class="section">
+                        <h2 class="section-title">Tentang Perusahaan</h2>
+
+                        <div class="about-grid">
+                            <div class="about-card">
+                                <span class="icon">🚀</span>
+                                <h3>Pemimpin Inovasi</h3>
+                                <p>Didirikan pada tahun 2010, Hendra Company
+                                    telah memantapkan dirinya sebagai kekuatan
+                                    perintis dalam inovasi teknologi. Kami
+                                    mengkhususkan diri dalam solusi perangkat
+                                    lunak canggih yang mengubah bisnis dan
+                                    mendorong transformasi digital di berbagai
+                                    industri.</p>
+                            </div>
+
+                            <div class="about-card">
+                                <span class="icon">🌍</span>
+                                <h3>Kehadiran Global</h3>
+                                <p>Dengan kantor pusat di Jakarta dan cabang di
+                                    Bandung serta Surabaya, kami melayani klien
+                                    di seluruh dunia. Tim ahli kami yang terdiri
+                                    dari 200+ orang memberikan hasil yang luar
+                                    biasa di berbagai pasar dan industri.</p>
+                            </div>
+
+                            <div class="about-card">
+                                <span class="icon">⭐</span>
+                                <h3>Rekam Jejak Keunggulan</h3>
+                                <p>Lebih dari 500 proyek berhasil diselesaikan,
+                                    tingkat kepuasan klien 98%, dan pengakuan
+                                    sebagai inovator teknologi terdepan di
+                                    Indonesia. Kami telah membantu bisnis
+                                    mencapai nilai transformasi digital lebih
+                                    dari $50 juta.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vision and Mission Section -->
+                    <div class="section">
+                        <h2 class="section-title">Visi dan Misi Perusahaan</h2>
+
+                        <div class="vision-mission">
+                            <div class="vm-card">
+                                <span class="icon">🎯</span>
+                                <h3>Visi Kami</h3>
+                                <p>Menjadi mitra teknologi terdepan di Asia
+                                    Tenggara, memberdayakan bisnis melalui
+                                    solusi digital inovatif dan mendorong masa
+                                    depan yang terhubung dan cerdas di mana
+                                    teknologi melayani aspirasi terbesar
+                                    umat manusia.</p>
+                            </div>
+
+                            <div class="vm-card">
+                                <span class="icon">🚀</span>
+                                <h3>Misi Kami</h3>
+                                <p>Kami memberikan solusi teknologi luar biasa
+                                    yang mendorong pertumbuhan, efisiensi, dan
+                                    inovasi. Melalui kolaborasi, integritas, dan
+                                    pembelajaran berkelanjutan, kami mengubah
+                                    tantangan menjadi peluang dan menciptakan
+                                    nilai yang berkelanjutan bagi klien,
+                                    karyawan, dan masyarakat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Dibuat Oleh: Hendra Rusmana Putra - 2025
+        </div>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
